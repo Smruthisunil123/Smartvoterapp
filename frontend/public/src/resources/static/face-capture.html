@@ -32,12 +32,10 @@
     </style>
 </head>
 <body>
-
     <h1>SmartVoter Face Capture</h1>
-
     <video id="video" autoplay playsinline></video>
     <br>
-    <button onclick="startCamera()">Start Camera</button>  <!-- ✅ Manual Start -->
+    <button onclick="startCamera()">Start Camera</button>
     <button onclick="captureImage()">Capture Face</button>
     <canvas id="canvas" style="display: none;"></canvas>
     <img id="capturedImage" alt="Captured Face" style="display: none;">
@@ -47,7 +45,6 @@
     <script>
         let imageDataUrl = "";
 
-        // ✅ Start Camera with Better Error Handling
         async function startCamera() {
             try {
                 console.log("🔍 Requesting camera access...");
@@ -60,7 +57,6 @@
             }
         }
 
-        // ✅ Capture Image
         function captureImage() {
             const video = document.getElementById('video');
             const canvas = document.getElementById('canvas');
@@ -76,16 +72,38 @@
             const ctx = canvas.getContext('2d');
             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-            imageDataUrl = canvas.toDataURL("image/png");  // Convert to Base64
+            imageDataUrl = canvas.toDataURL("image/png");
             capturedImage.src = imageDataUrl;
             capturedImage.style.display = "block";
 
             console.log("✅ Captured Image Data:", imageDataUrl);
         }
+
+        function uploadImage() {
+            if (!imageDataUrl) {
+                alert("No image captured! Please capture an image first.");
+                return;
+            }
+
+            fetch('https://smartvoter-mvp.uc.r.appspot.com/api/upload-face', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ image: imageDataUrl }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Upload successful:', data);
+                alert('Upload successful!');
+            })
+            .catch(error => {
+                console.error('Error uploading image:', error);
+                alert('Error uploading image. Please try again.');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('uploadButton').addEventListener('click', uploadImage);
+        });
     </script>
-    <script src="script.js"></script>
-
-
-    
 </body>
 </html>
