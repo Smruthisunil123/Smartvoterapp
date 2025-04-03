@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "smartvotingss"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "smartvoter-mvp"
+      cloudSql:
+        instanceId: "smartvoter-mvp"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

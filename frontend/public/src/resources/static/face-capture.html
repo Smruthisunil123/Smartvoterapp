@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartVoter Face Capture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        video, canvas, img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SmartVoter Face Capture</h1>
+
+    <video id="video" autoplay playsinline></video>
+    <br>
+    <button onclick="startCamera()">Start Camera</button>  <!-- ✅ Manual Start -->
+    <button onclick="captureImage()">Capture Face</button>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <img id="capturedImage" alt="Captured Face" style="display: none;">
+    <br>
+    <button id="uploadButton">Upload to Backend</button>
+
+    <script>
+        let imageDataUrl = "";
+
+        // ✅ Start Camera with Better Error Handling
+        async function startCamera() {
+            try {
+                console.log("🔍 Requesting camera access...");
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                document.getElementById('video').srcObject = stream;
+                console.log("✅ Camera started successfully!");
+            } catch (error) {
+                console.error("❌ Error accessing camera:", error);
+                alert("Failed to access the camera. Please check permissions in your browser settings.");
+            }
+        }
+
+        // ✅ Capture Image
+        function captureImage() {
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const capturedImage = document.getElementById('capturedImage');
+
+            if (!video.srcObject) {
+                alert("Camera not started! Please click 'Start Camera' first.");
+                return;
+            }
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            imageDataUrl = canvas.toDataURL("image/png");  // Convert to Base64
+            capturedImage.src = imageDataUrl;
+            capturedImage.style.display = "block";
+
+            console.log("✅ Captured Image Data:", imageDataUrl);
+        }
+    </script>
+    <script src="script.js"></script>
+
+
+    
+</body>
+</html>

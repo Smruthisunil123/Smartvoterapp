@@ -1,0 +1,11 @@
+# Use nginx to serve static files
+FROM nginx:latest
+
+# Copy all frontend files to the NGINX HTML directory
+COPY . /usr/share/nginx/html
+
+# Expose port 80 for the server
+EXPOSE 80
+
+# Start NGINX
+CMD ["nginx", "-g", "daemon off;"]

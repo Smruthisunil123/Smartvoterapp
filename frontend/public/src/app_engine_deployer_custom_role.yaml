@@ -1,0 +1,16 @@
+title: "App Engine Custom Deployer"
+description: "Allows deploying applications to App Engine."
+stage: "GA"
+permissions:
+- appengine.applications.get
+- appengine.applications.create
+- appengine.services.get
+- appengine.services.create
+- appengine.services.update
+- appengine.versions.create
+- appengine.versions.get
+- appengine.versions.update
+- appengine.instances.list
+- storage.buckets.get
+- storage.objects.create
+- storage.objects.delete
