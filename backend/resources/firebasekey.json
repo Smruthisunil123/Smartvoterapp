@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "smartvoter-mvp",
+    "private_key_id": "26ba5c88ff15d725bb466d00369f3c440516ac4d",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBRa5TuJb6KnLK\nzoOBl6g07E5RBIk/xqzXNgH1g6xAd06FRQUe4W+b9FKuaBoajQl7lF6VPL9NDGKu\nwFWW6uqHmNjVG3MiO+W07q01HgvtymlQ4bzt7FOF/PuuG0d5/TlbIauc5y7eqvOh\n9Hl3DOyCVNBP32w753q1dBlKkAFtduRtAt1WYPbWBtJ1Il+APfjKK48u7R/NyN9c\n1yp3QYUDVcTNNzXPI4DVezdajtIhjiDVISY8HjOmTRbF8RCGDciQGBpCsYahYIMq\nx6xPc7bcC7T/wsSv2Zejwy17IMDnxoWPqtcdz+hnjvxBgM5/4DsArYHV6NPQokup\nbPz5F1dTAgMBAAECggEAI96NywXwJz+njFIlf/CojCHrKwgffNGflFV2qZ0lY9WA\noiU8HQ4Ty6rdiXbSmWjhgKj5oNLkYiVRT0Ns3xR8MGxCmdJ9XLYnHJxLUxdfeWNe\nhl9O1A1PNwfLofV4H4DKm0o1cmpJfZPWoZEg1eJ1Jn8dJiW+DaQZVwHUC82MJkde\nwXZr56wSgpJNjCr5ZqFLodg8OSZLHqIjvesW3344AzMATqn+J2ToYuo/LpUjlj9y\nB2H7IMMQDImeFc5TBtAo81XPfLkJB5zDbtoy6h0WXbcI2X51PXlVLhu9gtYfHfL0\nQzDjbgC+HKQOfrF7fe8Smdzf3VCnW/MSxB5W2oW9mQKBgQDtgqKq43iJqNmCjbQZ\nHTb35ZREOecJM/36edVL3opL6uAE6izBjSTOXZ8hfl4Mjh213Q/RUVP1u73lyfNi\nxcAeIL1Wr6xm8RudALiO1kVgEVGLn1rtg2gxRGEk4xsN80pfwlwV1O8Xa/vCSk5p\nxP5mpBLZXA3KD6G0KWsVtewh7wKBgQDQUWuY17nCrb0bEKbWp4BF97nUiUABUsXl\n3/AcIIMJKWchyRqkuM5worLvg+kqMhKwEkWEw21icSTIjx/9VCL8jTnUFdcDmP65\n2LKISFRyIv3hYhqfgSr7gWW0LnS/DkmhHangmwXQuNnmn34eRoUgF37RbinTVWYR\nRsb4m7603QKBgBx3juWqk/Tz7vYN4+sqrD70Hlw7EGzy9VsDJUSNrMfCpA0SwECG\nmUW+xObvzXf1xKvajh3JgKWwVedn2CsbhpZV2Du+nIxOE8AyqOw91FzaVorEk9Jp\n8KAPERGpwsFeSqjFk+Ht/qYxBCDaZSGaQd+thLDWrrRsQTZlzHbyshWzAoGBAKPd\naCXyi8z3namMj7CKUfy3wRXOYOqpkcIhRV7atDiguN96sdqhBMLVOKvvt5nZiZm2\nxbiJgaHOHoElFKTRajP/Y13RUDEkSDsomkdZnhOqMsr3wLl3gbgVMUtqv6sKMiDq\nlJZ5Wzm0LrObAjoOfumfkcJsRbpXktJEOn+VA46BAoGBANSt6SQ0lMr7ZXcUVSAp\nqG6UToLGWGLVVwyPUEB7R8qSm1ASgvwLesZmieWQG2tmv2RWlkGZOmUq4WaWeEMS\nwAza0lETrB65FV+/0P9ICmlOjEKxc8IBPu6PFnB4Dk6Br4Hc7aUVrT2nQhJriw+i\nVse3o1Pyss9acRnUsYA/9s/y\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-fbsvc@smartvoter-mvp.iam.gserviceaccount.com",
+    "client_id": "114693885657313207007",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40smartvoter-mvp.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  

@@ -1,0 +1,43 @@
+spring:
+  autoconfigure:
+    exclude: 
+      - org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration
+  cloud:
+    gcp:
+      storage:
+        bucket: "src/main/resources/firebase-adminsdk.json"
+      credentials:
+        location: "classpath:firebase-adminsdk.json"  # Updated path
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+firebase:
+  bucket-name: "smartvoter-mvp.firebasestorage.app"  # Added to match @Value annotation
+
+server:
+  address: 0.0.0.0
+  port: 8080
+
+api:
+  google-maps: "AIzaSyB9TjFEgBaPGxYIsmP1529SdVA04lfr86E"       # Replace with actual Google Maps API key
+  firebase: "AIzaSyDJOff9nHj7xXz1Tpv_L_OYQ84ygxC7nSg"             # Replace with actual Firebase API key
+  recaptcha: "6LcEmAMrAAAAAL6dfX65lJzLDQAhqGqcV2Wi8pUI"   # Wrapped in quotes
+
+logging:
+  file:
+    name: logs/smartvoter.log
+    max-size: 10MB
+    max-history: 10
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  endpoint:
+    health:
+      show-details: always
