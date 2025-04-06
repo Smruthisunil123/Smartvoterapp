@@ -20,7 +20,7 @@ const pollingStations = [
 
 function PollingMap() {
   return (
-    <LoadScript googleMapsApiKey="AIzaSyB9TjFEgBaPGxYIsmP1529SdVA04lfr86E">
+    <LoadScript googleMapsApiKey=" ">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
         {pollingStations.map(station => (
           <Marker key={station.id} position={station.position} title={station.name} />
