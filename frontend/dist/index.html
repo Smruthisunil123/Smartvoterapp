@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Voting System</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDKs -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+
+  <!-- QR Scanner -->
+  <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcEmAMrAAAAAJ_ULfWkif-256q6oXLZqBUAcU58"></script>
+  <script>
+    grecaptcha.ready(function () {
+      grecaptcha.execute('6LcEmAMrAAAAAJ_ULfWkif-256q6oXLZqBUAcU58', { action: 'submit' }).then(function (token) {
+        console.log("Generated Token:", token);
+      });
+    });
+  </script>
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- ✅ React/Vite Entry -->
+  <script type="module" crossorigin src="/assets/main-BoGs4YlP.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-D7qm-lf7.css">
+</head>
+
+<body>
+  <!-- ✅ React mounts everything here -->
+  <div id="root"></div>
+</body>
+
+</html>

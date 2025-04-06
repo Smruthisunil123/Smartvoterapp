@@ -5,15 +5,26 @@
   "description": "A simple HTML/JS/CSS starter template",
   "main": "main.js",
   "scripts": {
-    "start": "live-server --port=8080 --open=localhost:8080"
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
     "axios": "^1.8.4",
     "face-api.js": "^0.22.2",
     "firebase-admin": "^13.2.0",
-    "react-webcam": "^7.2.0"
+    "html5-qrcode": "^2.3.8",
+    "jsqr": "^1.4.0",
+    "react-router-dom": "^7.5.0",
+    "react-webcam": "^7.2.0",
+    "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.0.0"
   }
 }
