@@ -21,10 +21,9 @@ server:
   port: 8080
 
 api:
-  google-maps: "AIzaSyB9TjFEgBaPGxYIsmP1529SdVA04lfr86E"       # Replace with actual Google Maps API key
-  firebase: "AIzaSyDJOff9nHj7xXz1Tpv_L_OYQ84ygxC7nSg"             # Replace with actual Firebase API key
-  recaptcha: "6LcEmAMrAAAAAL6dfX65lJzLDQAhqGqcV2Wi8pUI"   # Wrapped in quotes
-
+  google maps :     # Replace with actual Google Maps API key
+  firebase: # Replace with actual Firebase API  # Wrapped in quotes
+  recaptcha:
 logging:
   file:
     name: logs/smartvoter.log
