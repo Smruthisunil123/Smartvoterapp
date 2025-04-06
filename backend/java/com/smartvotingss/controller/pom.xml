@@ -1,0 +1,12 @@
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>3.2.1</version>
+            <configuration>
+                <mainClass>com.smartvotingss.backend.SmartVoterApplication</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
