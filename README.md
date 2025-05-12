@@ -1,1 +1,1 @@
-A starter on designing the smartvoter app. Its basically about deigitalizing the voting system.
+A starter on designing the smartvoter app. Its basically about digitalizing the voting system.
